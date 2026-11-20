@@ -1,0 +1,18 @@
+{
+  "version": "1.3.0",
+  "sha": "14f2fe6",
+  "builtAt": "2026-11-20T04:59:22.773Z",
+  "notes": [
+    "A center dot stays on the map, and the place name and forecast follow it after you pan.",
+    "Splash logo is radar rings on a clear background, without a square tile.",
+    "NWS alerts use each hazard’s own color, a lighter fill, and open the full message when tapped.",
+    "Startup splash stays up for 7 seconds from the moment the page opens, including a home-screen launch.",
+    "Smooth radar: soft contours instead of blocky gates, and light clutter under about 20 dBZ hidden.",
+    "Smooth playback: every frame preloads, then crossfades on a steady clock without skipping.",
+    "Version and Pacific build time shown in Settings.",
+    "A 7-second startup splash while the first radar frames load.",
+    "Compact phone layout: slim header, thin legend, and a short playback bar.",
+    "Doppler product picker for KBBX and KDAX, including base velocity, storm-relative velocity, hydrometeors, and precipitation.",
+    "Update tab to check for a new build and reload when you choose."
+  ]
+}

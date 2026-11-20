@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#070b10" />
+    <meta
+      name="description"
+      content="MyDoppler is a live radar map: global precipitation, US NEXRAD, and Doppler velocity from public data."
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MyDoppler" />
+    <title>MyDoppler</title>
+    <link rel="icon" type="image/svg+xml" href="/MyDoppler/favicon.svg" />
+    <link rel="apple-touch-icon" href="/MyDoppler/apple-touch-icon.png" />
+    <link rel="apple-touch-startup-image" href="/MyDoppler/splash.png" />
+    <style>html,body{background:#070b10;margin:0}#launch-splash{z-index:80;color:#f4f7fb;opacity:1;background:#070b10;flex-direction:column;justify-content:center;align-items:center;font-family:system-ui,sans-serif;transition:opacity .5s;display:flex;position:fixed;inset:0}#launch-splash.is-leaving{opacity:0;pointer-events:none}#launch-splash .mark{background:0 0;width:8.75rem;height:8.75rem;position:relative}#launch-splash svg{background:0 0;width:100%;height:100%;display:block}#launch-splash .sweep{background:conic-gradient(from 0deg, transparent 0 72%, #3ddc9726 86%, #3ddc97f2 100%);pointer-events:none;border-radius:999px;animation:2.6s linear infinite splash-sweep;position:absolute;inset:0;-webkit-mask:radial-gradient(circle,#0000 68%,#000 70% 78%,#0000 80%);mask:radial-gradient(circle,#0000 68%,#000 70% 78%,#0000 80%)}#launch-splash h1{letter-spacing:-.03em;margin:1.15rem 0 0;font-size:2rem;font-weight:700}#launch-splash .tag{color:#3ddc97;margin:.2rem 0 0;font-size:.95rem;font-weight:600}#launch-splash .ver{right:0;bottom:max(1.35rem, env(safe-area-inset-bottom));color:#9aa8b8;letter-spacing:.04em;text-align:center;margin:0;font-size:12px;position:absolute;left:0}@keyframes splash-sweep{to{transform:rotate(360deg)}}</style>
+    <script type="module" crossorigin src="/MyDoppler/assets/index-ByM5Sydx.js"></script>
+    <link rel="stylesheet" crossorigin href="/MyDoppler/assets/index-0PrlYXp7.css">
+  <link rel="manifest" href="/MyDoppler/manifest.webmanifest"></head>
+  <body>
+    <div id="launch-splash" role="img" aria-label="MyDoppler v1.3.0">
+      <div class="mark">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <g fill="none" stroke="#3ddc97" stroke-linecap="round">
+            <circle cx="60" cy="60" r="46" stroke-width="2" opacity="0.35" />
+            <circle cx="60" cy="60" r="32" stroke-width="2.2" opacity="0.62" />
+            <circle cx="60" cy="60" r="18" stroke-width="2.4" opacity="0.95" />
+          </g>
+          <path d="M60 60 L60 18 A42 42 0 0 1 96 74 Z" fill="#3ddc97" />
+          <circle cx="60" cy="60" r="4.2" fill="#f4fff9" />
+        </svg>
+        <div class="sweep"></div>
+      </div>
+      <h1>MyDoppler</h1>
+      <p class="tag">Live radar</p>
+      <p class="ver">MyDoppler v1.3.0</p>
+    </div>
+    <div id="root"></div>
+    <script>
+      ;(function () {
+        var node = document.getElementById('launch-splash')
+        if (!node) return
+        window.addEventListener('pageshow', function (event) {
+          if (event.persisted) node.remove()
+        })
+        var hold = Math.max(0, 7000 - performance.now())
+        window.setTimeout(function () {
+          node.classList.add('is-leaving')
+          window.setTimeout(function () {
+            node.remove()
+          }, 520)
+        }, hold)
+      })()
+    </script>
+  </body>
+</html>
